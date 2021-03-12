@@ -1,0 +1,126 @@
+/* .costform-container{
+
+} */
+label {
+  margin:0 10px;
+}
+label > input,select {
+margin-left: 5px;
+}
+.costform-form{
+  border-top: 3px solid;
+  border-image-slice: 1;
+  border-image: linear-gradient(
+        to left,
+        rgb(26, 23, 23) 10%,
+        rgb(78, 63, 30) 50%,
+        rgb(28, 27, 27) 90%
+    ) 100% 0 0 0/3px 0 0 0 stretch;
+  color: #fff;
+  display: flex;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: fixed;
+  z-index: 998;
+}
+
+.cost-form-button {
+  background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color:#ededed;
+  border-radius:10px;
+  border:2px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:black;
+  font-weight:bold;
+  padding:6px 8px;
+  margin: 0 5px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+.cost-form-button:hover {
+  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color:#dfdfdf;
+}
+.cost-form-button:active {
+  position:relative;
+  top:1px;
+}
+
+  
+  .modal {
+    display: none;
+  }
+
+  .modal--isVisible {
+    display: flex;
+  }
+
+  .modal-bg{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
+
+  .modal-box{
+      position: relative;
+      width: 30%;
+      margin: auto;
+      padding:20px;
+      background-color: rgb(255, 255, 255);
+      -webkit-box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 1);
+      -moz-box-shadow:    1px 3px 12px 0px rgba(0, 0, 0, 1);
+      box-shadow:         1px 3px 12px 0px rgba(0, 0, 0, 1);
+      border-radius: 10px;
+      z-index: 1002;
+  }
+  .modal-close {
+    color: rgb(94, 94, 94);
+    line-height: 50px;
+    font-size: 90%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    cursor: pointer;
+    border: none;
+  }
+  .modal-close:hover {
+    color: black;
+  }
+  .modal-text {
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 960px) {
+  .costform-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+  }
+  label {
+    margin:10px 0;
+  }
+  label > input,select {
+  margin-left: 5px;
+  }
+  .cost-form-button {
+    margin: 5px 0;
+  }
+  .modal-box{
+  width: 80%;
+  }
+
+  }

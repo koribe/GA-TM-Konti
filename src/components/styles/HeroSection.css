@@ -1,0 +1,86 @@
+.hero-container {
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero-image-container{
+    flex-grow: 1;
+}
+
+.hero-image{
+    width: 550px;
+    height: 500px;
+    margin: auto;
+    border-radius: 21% 79% 74% 26% / 50% 50% 50% 50%;
+    overflow: hidden;
+}
+.hero-image > img {
+    height: 500px;
+    -webkit-transform: scale(1) rotate(0);
+	-moz-transform: scale(1) rotate(0);
+	-o-transform: scale(1) rotate(0); /* can stack animations */
+	-ms-transform: scale(1) rotate(0);
+	transform: scale(1) rotate(0);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.hero-image >img:hover {
+    -webkit-transform: scale(1.1) rotate(5deg);
+	-moz-transform: scale(1.1) rotate(5deg);
+	-o-transform: scale(1.1) rotate(5deg); /* can stack animations */
+	-ms-transform: scale(1.1) rotate(5deg);
+	transform: scale(1.1) rotate(5deg);
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.hero-text-container{
+    flex-grow: 1;
+}
+
+.hero-text{
+    display: table;
+    margin: auto;
+    padding: 40px 20px;
+}
+.hero-text > h1 > p {
+font-size: 40px;
+}
+.phone-num{
+    font-size: 42px;
+    color: rgb(56, 159, 255);
+    text-decoration: none;
+}
+@media screen and (max-width: 1400px) {
+    .hero-image, .hero-image >img{
+        width: 450px;
+        height: 400px;
+    }
+    .hero-text > h1 > p {
+        font-size: 34px;
+        }
+        .phone-num{
+            font-size: 36px;
+        }
+}
+
+@media screen and (max-width:968px) {
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero-image, .hero-image >img{
+        width: 450px;
+        height: 400px;
+    }
+
+    .hero-text > h1 > p {
+        font-size: 30px;
+        }
+        .phone-num{
+            font-size: 32px;
+        }
+}
