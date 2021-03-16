@@ -1,15 +1,27 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './styles/HeroSection.css';
 import HeroImage from '../images/hero-image.jpg';
 import HeroVideo from '../images/hero-video.mp4';
+import ReactPlayer from 'react-player';
 
-function HeroSection() {
+
+
+function HeroSection(props) {
+    const ended = useRef(null)
     return (
         <div className="hero-container">
             <div className="hero-image-container">
                 <div className="hero-image">
-                <video src={HeroVideo} autoPlay/>
-                    {/* <img src={HeroImage} /> */}
+                <ReactPlayer 
+                className='hero-video'
+                url={HeroVideo}
+                playing 
+                controls   
+                width='100%'
+                height='100%'
+                light={HeroImage}
+                ref={ended}
+                onEnded={() => ended.current.showPreview()} />
                 </div>
             </div>
             <div className="hero-text-container">

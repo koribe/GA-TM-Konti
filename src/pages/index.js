@@ -5,9 +5,6 @@ import '../components/styles/global.css';
 import Home from "../components/Home";
 import {Helmet} from 'react-helmet';
 
-
-
-
 // markup
 const IndexPage = () => {
   return (
