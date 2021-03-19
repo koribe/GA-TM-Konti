@@ -30,7 +30,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar strong'>
         <div className='navbar-container'>
             <div className="navbar-logo">TM KONTI<img alt="kontener logo" src={NavBarLogo}/></div>
           <div className='menu-icon' onClick={handleClick}>

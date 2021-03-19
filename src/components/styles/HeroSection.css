@@ -1,5 +1,5 @@
 .hero-container {
-    margin: 40px auto;
+    padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,6 +13,9 @@
     width: 550px;
     height: 309px;
     margin: auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
 }
 .hero-image > img {
     width: 100%;
@@ -48,10 +51,11 @@
 }
 .hero-text > h1 > p {
 font-size: 40px;
+padding: 0;
 }
 .phone-num{
-    font-size: 42px;
-    color: rgb(56, 159, 255);
+    font-size: 1.1em;
+    color: #1f98f4;
     text-decoration: none;
 }
 @media screen and (max-width: 1400px) {

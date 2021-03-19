@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:PT+Sans:wght@400;700;1,700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Open Sans';
   }
 
 html, body, #___gatsby {
     height: 100%;
+    background-color: rgb(240, 240, 240);
 }
 
 div[role="group"][tabindex] {
@@ -17,11 +18,25 @@ div[role="group"][tabindex] {
 
 .page-container{
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
 }
-
+p{
+    padding: 20px 20px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.center{
+text-align: center;
+}
+.strong{
+    font-weight: 700;
+}
 @media screen and (max-width: 960px) {
     .page-container{
         width: 100%;
+        box-shadow: none;
+    -webkit-filter: drop-shadow(none);
+    filter: drop-shadow(none);
     }
 }

@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import '../components/styles/global.css';
 import Home from "../components/Home";
 import {Helmet} from 'react-helmet';
+import Card from '../components/Cards';
 
 // markup
 const IndexPage = () => {
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <div className='page-container'>
       <HeroSection />
       <Home />
+      <Card />
       </div>
     </main>
   )
