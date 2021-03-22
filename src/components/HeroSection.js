@@ -29,7 +29,8 @@ function HeroSection(props) {
                     <h1>
                         <p>Telefonos konténer rendelését</p>
                         <p>azonnal tudjuk fogadni</p>
-                        <a href="tel:+36-70-428-7596" className="phone-num"><p>+36/70 428 7596</p></a>
+                        <a href="tel:+36-70-428-7596" className="phone-num">+36/70 428 7596</a>
+                        <a href="mailto:tmkonti@gmail.com" className="phone-num">tmkonti@gmail.com</a>
                     </h1>
                 </div>
             </div>

@@ -13,33 +13,18 @@
     width: 550px;
     height: 309px;
     margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
-}
-.hero-image > img {
-    width: 100%;
-    height: 309px;
-    -webkit-transform: scale(1) rotate(0);
-	-moz-transform: scale(1) rotate(0);
-	-o-transform: scale(1) rotate(0); /* can stack animations */
-	-ms-transform: scale(1) rotate(0);
-	transform: scale(1) rotate(0);
-    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-}
-.hero-image >img:hover {
-    -webkit-transform: scale(1.1) rotate(5deg);
-	-moz-transform: scale(1.1) rotate(5deg);
-	-o-transform: scale(1.1) rotate(5deg); /* can stack animations */
-	-ms-transform: scale(1.1) rotate(5deg);
-	transform: scale(1.1) rotate(5deg);
-    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
 .hero-image > video {
     display: block;
     margin: auto;
     width: 100%;
 }
+
 .hero-text-container{
     flex-grow: 1;
 }
@@ -49,14 +34,21 @@
     margin: auto;
     padding: 40px 20px;
 }
+.hero-text > h1{
+display:flex;
+flex-direction: column;
+}
 .hero-text > h1 > p {
 font-size: 40px;
 padding: 0;
 }
 .phone-num{
     font-size: 1.1em;
-    color: #1f98f4;
+    color: rgb(255, 184, 28);
     text-decoration: none;
+}
+.phone-num:hover{
+    color: rgb(255, 204, 48);
 }
 @media screen and (max-width: 1400px) {
     .hero-image, .hero-image >img{

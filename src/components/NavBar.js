@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './styles/NavBar.css';
 import NavBarLogo from '../images/navbar-logo.png';
 import CostForm from "../components/CostForm";
+import {FaFacebook} from 'react-icons/fa';
+import {FaPhone} from 'react-icons/fa';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -22,10 +24,6 @@ function Navbar() {
         closeMobileMenu();
   }};
 
-  useEffect(() => {
-    showButton();
-  }, []);
-
   window.addEventListener('resize', showButton );
 
   return (
@@ -33,23 +31,30 @@ function Navbar() {
       <nav className='navbar strong'>
         <div className='navbar-container'>
             <div className="navbar-logo">TM KONTI<img alt="kontener logo" src={NavBarLogo}/></div>
-          <div className='menu-icon' onClick={handleClick}>
+          <div className='menu-icon' role='button' aria-label='Menu handler' onClick={handleClick} onKeyPress={handleClick} tabIndex={0}>
             <div className={click ? "burger-container menu-opened" : "burger-container"}>
               <div className={click ? "bar topBar menu-opened" : "bar topBar"}></div>
               <div className={click ? "bar btmBar menu-opened" : "bar btmBar"}></div>
             </div>
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li key="home" className='nav-item'>
-                <a href="/" className="nav-links">Home</a>
-            </li>
 
-            <li key="arkalkulator" className='nav-item' onClick={arkalkulator}>
-            <span href="/" className="nav-links">Árkalkulátor</span>
+            <li key="arkalkulator" className='nav-item'>
+            <span role='button' className="nav-links" onClick={arkalkulator} onKeyPress={arkalkulator} tabIndex={0}>Árkalkulátor</span>
             </li>
 
             <li key="products" className='nav-item'>
-            <a href="/" className="nav-links">Products</a>
+            <a href="tel:+36-70-428-7596" className="nav-links"><FaPhone/>+36/70 428 7596</a>
+            </li>
+
+            <li key="facebook" className='nav-item'>
+            <a href="https://www.facebook.com/tmkonti"
+                  target='_blank'
+                  rel="noreferrer"
+                  aria-label='Facebook'
+                  className="nav-links">
+                  <FaFacebook/>
+            </a>
             </li>
           </ul>
         </div>

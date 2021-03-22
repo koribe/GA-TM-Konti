@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './styles/CostForm.css';
 
 
@@ -9,6 +9,18 @@ function CostForm(props) {
     const [material,setMaterial] = useState('epitesi');
     const [isModalVisible,setModalVisible] = useState(false);
     const [modalText,setModalText] = useState('');
+
+    useEffect(() => {
+      function keyListener(e) {
+        if (isModalVisible && e.keyCode === 27) {
+          setModalVisible(false);
+        }
+      }
+  
+      document.addEventListener("keydown", keyListener);
+  
+      return () => document.removeEventListener("keydown", keyListener);
+    });
 
     const zones =
     [[1161,2144,2143],
@@ -95,6 +107,7 @@ function CostForm(props) {
       setModalVisible(false);
       }
     }
+  
    
     const handleSubmit = (e) => {
       e.preventDefault();
