@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "TM-Konti",
+      siteUrl: `vibrant-elion-16de38.netlify.app`,
   },
   plugins: [
     {
