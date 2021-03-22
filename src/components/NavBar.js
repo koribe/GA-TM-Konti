@@ -24,7 +24,7 @@ function Navbar() {
         closeMobileMenu();
   }};
 
-  document.addEventListener('resize', showButton );
+  // document.addEventListener('resize', showButton );
 
   return (
     <>
