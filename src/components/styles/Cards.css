@@ -29,7 +29,7 @@
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(49,47,41);
   }
   
   .cards__item__link {
@@ -64,8 +64,9 @@
     padding: 6px 8px;
     max-width: calc((100%) - 60px);
     font-size: 14px;
-    color: #fff;
-    background-color: #1f98f4;
+    color: rgb(39,37,31);
+    background-color: rgb(255, 204, 48);
+    font-weight: 700;
     box-sizing: border-box;
   }
   
@@ -94,6 +95,7 @@
   
   .cards__item__text {
     color: #ffffff;
+    font-weight: 400;
     font-size: 18px;
     line-height: 24px;
   }
