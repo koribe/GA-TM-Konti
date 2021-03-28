@@ -1,28 +1,28 @@
 .hero-container {
-    padding: 50px 0;
+    padding: 50px 30px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .hero-image-container{
-    flex-grow: 1;
+flex-grow: 3;
 }
 
 .hero-image{
-    width: 550px;
-    height: 309px;
-    margin: auto;
+    padding-top: 56.25%;
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
 }
-.hero-image > video {
-    display: block;
-    margin: auto;
-    width: 100%;
+.hero-video {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+    left: 0;
 }
 
 .hero-text-container{
@@ -50,10 +50,15 @@ padding: 0;
 .phone-num:hover{
     color: rgb(255, 204, 48);
 }
-@media screen and (max-width: 1400px) {
-    .hero-image, .hero-image >img{
-        width: 450px;
-        height: 253px;
+ @media screen and (max-width: 1400px) {
+    .hero-container {
+        flex-flow: column;
+    }
+    .hero-image-container{
+        display:flex;
+        width: 100%;
+        height: 100%;
+        flex-flow: column;
     }
     .hero-text > h1 > p {
         font-size: 34px;
@@ -63,18 +68,9 @@ padding: 0;
         }
 }
 
-@media screen and (max-width:968px) {
-
-    .hero-container {
-        flex-direction: column;
-    }
-
-}
-
 @media screen and (max-width: 768px) {
-    .hero-image, .hero-image >img{
-        width: 450px;
-        height: 253px;
+    .hero-container {
+        padding: 20px 10px;
     }
 
     .hero-text > h1 > p {

@@ -22,7 +22,7 @@ function HeroSection(props) {
                 light={HeroImage}
                 ref={ended}
                 onEnded={() => ended.current.showPreview()} />
-                </div>
+            </div>
             </div>
             <div className="hero-text-container">
                 <div className="hero-text">

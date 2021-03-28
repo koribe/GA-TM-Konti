@@ -8,6 +8,7 @@ import {FaPhone} from 'react-icons/fa';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [isOpenCost, setIsOpenCost] = useState(false);
+  const [logoText, setLogoText] = useState("TM KONTI");
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -19,18 +20,20 @@ function Navbar() {
     closeMobileMenu();
   }
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-        closeMobileMenu();
-  }};
+  const handleLogoText = () => {
+    if (window.innerWidth <= 960) setLogoText("TM")
+    else setLogoText("TM KONTI")
+  };
 
-  // document.addEventListener('resize', showButton );
-
+  React.useEffect(() => {
+    handleLogoText();
+    window.addEventListener('resize', handleLogoText);
+  })
   return (
     <>
       <nav className='navbar strong'>
         <div className='navbar-container'>
-            <div className="navbar-logo">TM KONTI<img alt="kontener logo" src={NavBarLogo}/></div>
+            <div className="navbar-logo">{logoText}<img alt="kontener logo" src={NavBarLogo}/></div>
           <div className='menu-icon' role='button' aria-label='Menu handler' onClick={handleClick} onKeyPress={handleClick} tabIndex={0}>
             <div className={click ? "burger-container menu-opened" : "burger-container"}>
               <div className={click ? "bar topBar menu-opened" : "bar topBar"}></div>
@@ -44,7 +47,7 @@ function Navbar() {
             </li>
 
             <li key="products" className='nav-item'>
-            <a href="tel:+36-70-428-7596" className="nav-links"><FaPhone/>+36/70 428 7596</a>
+            <a href="tel:+36-70-428-7596" className="nav-links">+36/70 428 7596 <FaPhone/></a>
             </li>
 
             <li key="facebook" className='nav-item'>
