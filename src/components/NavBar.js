@@ -33,7 +33,12 @@ function Navbar() {
     <>
       <nav className='navbar strong'>
         <div className='navbar-container'>
-            <div className="navbar-logo">{logoText}<img alt="kontener logo" src={NavBarLogo}/></div>
+            <div className="navbar-logo">
+              <img alt="kontener logo" className="navbar-logo-image" src={NavBarLogo}/>
+              <div className="navbar-logo-text">
+                <p>TM</p><p>KONTI</p>
+              </div>
+            </div>
           <div className='menu-icon' role='button' aria-label='Menu handler' onClick={handleClick} onKeyPress={handleClick} tabIndex={0}>
             <div className={click ? "burger-container menu-opened" : "burger-container"}>
               <div className={click ? "bar topBar menu-opened" : "bar topBar"}></div>
@@ -44,6 +49,10 @@ function Navbar() {
 
             <li key="arkalkulator" className='nav-item'>
             <span role='button' className="nav-links" onClick={arkalkulator} onKeyPress={arkalkulator} tabIndex={0}>Árkalkulátor</span>
+            </li>
+
+            <li key="rendeles" className='nav-item'>
+            <a href="#order" className="nav-links">Rendelés</a>
             </li>
 
             <li key="products" className='nav-item'>

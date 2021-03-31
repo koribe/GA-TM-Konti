@@ -6,6 +6,7 @@ import Home from "../components/Home";
 import {Helmet} from 'react-helmet';
 import Card from '../components/Cards';
 import Footer from '../components/Footer';
+import Order from "../components/Order";
 
 // markup
 const IndexPage = () => {
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <HeroSection />
       <Home />
       <Card />
+      <Order />
       </div>
       <Footer />
     </main>

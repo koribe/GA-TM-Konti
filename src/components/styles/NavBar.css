@@ -40,6 +40,31 @@
     align-items: center;
     white-space: nowrap;
   }
+  .navbar-logo-image {
+    height: 85%;
+  }
+
+  .navbar-logo-text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .navbar-logo-text>p:first-child{
+    font-size:2.8rem;
+  }
+  .navbar-logo-text>p:last-child{
+    font-size:1.3rem;
+  }
+
+  .navbar-logo-text > p{
+    margin: 0;
+    padding: 0;
+    line-height: 0.9;
+  }
 
   .nav-menu {
     display: grid;
