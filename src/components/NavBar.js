@@ -8,7 +8,6 @@ import {FaPhone} from 'react-icons/fa';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [isOpenCost, setIsOpenCost] = useState(false);
-  const [logoText, setLogoText] = useState("TM KONTI");
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -19,16 +18,6 @@ function Navbar() {
     openCostForm();
     closeMobileMenu();
   }
-
-  const handleLogoText = () => {
-    if (window.innerWidth <= 960) setLogoText("TM")
-    else setLogoText("TM KONTI")
-  };
-
-  React.useEffect(() => {
-    handleLogoText();
-    window.addEventListener('resize', handleLogoText);
-  })
   return (
     <>
       <nav className='navbar strong'>

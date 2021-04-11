@@ -26,6 +26,7 @@ div[role="group"][tabindex] {
   width: 80%;
   margin: 0 auto;
   background-color: rgb(39,37,31);
+  padding-bottom: 50px;
 }
 p {
   padding: 20px 20px;
