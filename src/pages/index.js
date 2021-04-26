@@ -7,7 +7,6 @@ import {Helmet} from 'react-helmet';
 import Card from '../components/Cards';
 import Footer from '../components/Footer';
 import Order from "../components/Order";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // markup
 const IndexPage = () => {

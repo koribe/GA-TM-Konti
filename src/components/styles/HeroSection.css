@@ -1,82 +1,85 @@
 .hero-container {
-    padding: 50px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero-image-container{
-flex-grow: 3;
+.hero-image-container {
+  flex-grow: 3;
 }
 
-.hero-image{
-    padding-top: 56.25%;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
-    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+.hero-image {
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.3));
 }
 .hero-video {
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.hero-text-container{
-    flex-grow: 1;
+.hero-text-container {
+  flex-grow: 1;
 }
 
-.hero-text{
-    display: table;
-    margin: auto;
-    padding: 40px 20px;
+.hero-text {
+  display: table;
+  margin: auto;
+  padding: 40px 20px;
 }
-.hero-text > h1{
-display:flex;
-flex-direction: column;
+.hero-text > h1 {
+  display: flex;
+  flex-direction: column;
 }
 .hero-text > h1 > p {
-font-size: 40px;
-padding: 0;
+  font-size: 40px;
+  padding: 0;
 }
-.phone-num{
-    font-size: 1.1em;
-    color: rgb(255, 184, 28);
-    text-decoration: none;
+.phone-num {
+  font-size: 1.1em;
+  color: rgb(255, 184, 28);
+  text-decoration: none;
 }
-.phone-num:hover{
-    color: rgb(255, 204, 48);
+.phone-num:hover {
+  color: rgb(255, 204, 48);
 }
- @media screen and (max-width: 1400px) {
-    .hero-container {
-        flex-flow: column;
-    }
-    .hero-image-container{
-        display:flex;
-        width: 100%;
-        height: 100%;
-        flex-flow: column;
-    }
-    .hero-text > h1 > p {
-        font-size: 34px;
-        }
-        .phone-num{
-            font-size: 36px;
-        }
+@media screen and (max-width: 1400px) {
+  .hero-text > h1 > p {
+    font-size: 34px;
+  }
+  .phone-num {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-container {
+    flex-flow: column;
+  }
+  .hero-image-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: column;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .hero-container {
-        padding: 20px 10px;
-    }
+  .hero-container {
+    padding: 20px 10px;
+  }
 
-    .hero-text > h1 > p {
-        font-size: 30px;
-        }
-        .phone-num{
-            font-size: 32px;
-        }
+  .hero-text > h1 > p {
+    font-size: 30px;
+  }
+  .phone-num {
+    font-size: 32px;
+  }
 }
