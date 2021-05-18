@@ -39,9 +39,9 @@ function Navbar() {
             className='menu-icon'
             role='button'
             aria-label='Menu handler'
+            tabIndex='0'
             onClick={handleClick}
-            onKeyPress={handleClick}
-            tabIndex={0}>
+            onKeyPress={handleClick}>
             <div
               className={
                 click ? "burger-container menu-opened" : "burger-container"
@@ -63,13 +63,13 @@ function Navbar() {
                 className='nav-links'
                 onClick={arkalkulator}
                 onKeyPress={arkalkulator}
-                tabIndex={0}>
+                tabIndex='0'>
                 Árkalkulátor
               </span>
             </li>
 
             <li key='rendeles' className='nav-item'>
-              <a href='#order' className='nav-links'>
+              <a href='#order' className='nav-links' onClick={closeMobileMenu}>
                 Rendelés
               </a>
             </li>

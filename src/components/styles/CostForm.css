@@ -1,17 +1,24 @@
-h2,select,option,input{
-color: #000;
+h2,
+select,
+option,
+input {
+  color: #000;
 }
 label {
-  margin:0 10px;
+  margin: 0 10px;
 }
-label > input,select {
-margin-left: 5px;
-color: rgb(0, 0, 0);
+label > input,
+select {
+  margin-left: 5px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  height: 30px;
+  border-radius: 5px;
 }
-.costform-form{
+.costform-form {
   color: #fff;
   display: flex;
-  background: linear-gradient(90deg, rgb(59,57,51) 0%, rgb(49,47,41) 100%);
+  background: linear-gradient(90deg, rgb(59, 57, 51) 0%, rgb(49, 47, 41) 100%);
   width: 100%;
   height: 50px;
   justify-content: center;
@@ -22,85 +29,86 @@ color: rgb(0, 0, 0);
 }
 
 .cost-form-button {
-  background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-  background-color:#ededed;
-  border-radius:10px;
-  border:2px solid #dcdcdc;
-  display:inline-block;
-  cursor:pointer;
-  color:black;
-  font-weight:bold;
-  padding:6px 8px;
+  display: inline-block;
   margin: 0 5px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(39, 37, 31);
+  background-color: rgb(255, 204, 48);
+  border: solid 1px transparent;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 .cost-form-button:hover {
-  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-  background-color:#dfdfdf;
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.1s ease-in-out;
 }
 .cost-form-button:active {
-  position:relative;
-  top:1px;
+  position: relative;
+  top: 1px;
 }
 
-  
-  .modal {
-    display: none;
-  }
+.modal {
+  display: none;
+}
 
-  .modal--isVisible {
-    display: flex;
-  }
+.modal--isVisible {
+  display: flex;
+}
 
-  .modal-bg{
-    background-color: rgba(0,0,0,0.7);
-    position: fixed;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-  }
+.modal-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
 
-  .modal-box{
-      position: relative;
-      width: 30%;
-      margin: auto;
-      padding:20px;
-      background-color: rgb(255, 255, 255);
-      -webkit-box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 1);
-      -moz-box-shadow:    1px 3px 12px 0px rgba(0, 0, 0, 1);
-      box-shadow:         1px 3px 12px 0px rgba(0, 0, 0, 1);
-      border-radius: 10px;
-      z-index: 1002;
-  }
+.modal-box {
+  position: relative;
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 1);
+  box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  z-index: 1002;
+}
 
-  .modal-box > h2{
-    color:black;
-  }
-  .modal-close {
-    color: rgb(94, 94, 94);
-    line-height: 50px;
-    font-size: 90%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 70px;
-    cursor: pointer;
-    border: none;
-  }
-  .modal-close:hover {
-    color: black;
-  }
-  .modal-text {
-    color: black;
-    margin-top: 10px;
-  }
+.modal-box > h2 {
+  color: black;
+}
+.modal-close {
+  color: rgb(94, 94, 94);
+  line-height: 50px;
+  font-size: 90%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  cursor: pointer;
+  border: none;
+}
+.modal-close:hover {
+  color: black;
+}
+.modal-text {
+  color: black;
+  margin-top: 10px;
+}
 
-  @media screen and (max-width: 960px) {
-  .costform-form{
+@media screen and (max-width: 960px) {
+  .costform-form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -109,16 +117,16 @@ color: rgb(0, 0, 0);
     top: 0;
   }
   label {
-    margin:10px 0;
+    margin: 10px 0;
   }
-  label > input,select {
-  margin-left: 5px;
+  label > input,
+  select {
+    margin-left: 5px;
   }
   .cost-form-button {
     margin: 5px 0;
   }
-  .modal-box{
-  width: 80%;
+  .modal-box {
+    width: 80%;
   }
-
-  }
+}
