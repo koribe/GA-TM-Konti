@@ -24,7 +24,7 @@ function Navbar() {
     <>
       <nav className='navbar strong'>
         <div className='navbar-container'>
-          <div className='navbar-logo'>
+          <a href='/' className='navbar-logo'>
             <img
               alt='kontener logo'
               className='navbar-logo-image'
@@ -34,7 +34,7 @@ function Navbar() {
               <p>TM</p>
               <p>KONTI</p>
             </div>
-          </div>
+          </a>
           <div
             className='menu-icon'
             role='button'

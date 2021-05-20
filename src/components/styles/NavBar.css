@@ -41,6 +41,9 @@
   align-items: center;
   white-space: nowrap;
 }
+.navbar-logo:hover {
+  text-shadow: 0px 0px 3px rgb(255, 223, 127);
+}
 .navbar-logo-image {
   height: 85%;
 }
