@@ -49,6 +49,7 @@
 }
 .phone-num:hover {
   color: rgb(255, 204, 48);
+  text-shadow: 0px 0px 3px rgb(253, 216, 104);
 }
 @media screen and (max-width: 1400px) {
   .hero-text > h1 > p {
