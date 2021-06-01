@@ -1,21 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/Order.css";
 import { useForm } from "react-hook-form";
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 function Order() {
+  const [sendSuccess, setSendSuccess] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": data.getAttribute("name"),
+        ...data,
+      }),
+    })
+      .then((res) => {
+        setSendSuccess(true);
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <section id='order'>
       <h2>Kapcsolat</h2>
-      {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
-      <form id='order-form' onSubmit={handleSubmit(onSubmit)}>
+      <div
+        className={
+          sendSuccess
+            ? "success-animation visible"
+            : "success-animation invisible"
+        }>
+        <svg
+          className='checkmark'
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 52 52'>
+          <circle
+            className='checkmark__circle'
+            cx='26'
+            cy='26'
+            r='25'
+            fill='none'
+          />
+          <path
+            className='checkmark__check'
+            fill='none'
+            d='M14.1 27.2l7.1 7.2 16.7-16.8'
+          />
+        </svg>
+        <h3>Köszönjük!</h3>
+        <h3>Kollégánk hamarosan felveszi önnel a kapcsolatot</h3>
+      </div>
+      {/* "handleSubmit" will validate inputs before invoking "onSubmit" */}
+      <form
+        name='kapcsolat'
+        id='order-form'
+        className={sendSuccess ? "invisible" : "visible"}
+        onSubmit={handleSubmit(onSubmit)}
+        data-netlify='true'>
         <ul id='inputs-container'>
+          <input type='hidden' name='form-name' value='kapcsolat' />
           <li className='input'>
             <label htmlFor='name'>
               Név<em>*</em>

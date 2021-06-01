@@ -1,20 +1,20 @@
-import React from 'react';
-import CardItem from './CardItem';
-import './styles/Cards.css';
-import img1 from '../images/cards/sajat_telep.jpg';
-import img2 from '../images/cards/kontener_meretek.jpg';
-import img3 from '../images/cards/vegyes_kontener.jpg';
-import img4 from '../images/cards/kontener_ido.jpg';
-import img5 from '../images/cards/csapat.jpg';
+import React from "react";
+import CardItem from "./CardItem";
+import "./styles/Cards.css";
+import img1 from "../images/cards/sajat_telep.jpg";
+import img2 from "../images/cards/kontener_meretek.jpg";
+import img3 from "../images/cards/vegyes_kontener.jpg";
+import img4 from "../images/cards/kontener_ido.jpg";
+import img5 from "../images/cards/csapat.jpg";
 
 function Cards() {
-    return (
-        <div className="cards">
-            <h1>Rugalmasság, áron alul kínálva!</h1>
-            <div className="cards__container">
-                <div className="cards__wrapper">
-                    <ul className="cards__items">
-                    <CardItem
+  return (
+    <div className='cards'>
+      <h2>Rugalmasság, áron alul kínálva!</h2>
+      <div className='cards__container'>
+        <div className='cards__wrapper'>
+          <ul className='cards__items'>
+            <CardItem
               src={img1}
               text='Saját hulladék szelektáló és újrahasznosító telepünknek köszönhetően, a konténereket olcsóbban tudja megrendelni, mint más konténeres szolgáltatóktól'
               label='ALACSONY ÁRAK'
@@ -46,11 +46,11 @@ function Cards() {
               label='SZAKÉRTELEM'
               alt='Tapasztalt csapat'
             />
-                    </ul>
-                </div>
-            </div>
+          </ul>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Cards
+export default Cards;
