@@ -78,6 +78,7 @@ function Order() {
             <div className='input-field'>
               <input
                 id='name'
+                name='name'
                 type='text'
                 {...register("name", {
                   required: "A mező kitöltése kötelező",
@@ -107,6 +108,7 @@ function Order() {
             <div className='input-field'>
               <input
                 id='email'
+                name='email'
                 {...register("email", {
                   required: "A mező kitöltése kötelező",
                   pattern: {
@@ -128,7 +130,12 @@ function Order() {
           <li className='input'>
             <label htmlFor='phone'>Telefonszám</label>
             <div className='input-field'>
-              <input id='phone' {...register("phone")} type='tel' />
+              <input
+                id='phone'
+                name='phone'
+                {...register("phone")}
+                type='tel'
+              />
             </div>
           </li>
 
@@ -139,6 +146,7 @@ function Order() {
             <div className='input-field'>
               <textarea
                 id='message'
+                name='message'
                 {...register("message", {
                   required: "A mező kitöltése kötelező",
                   maxLength: {
