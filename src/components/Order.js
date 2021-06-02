@@ -22,7 +22,7 @@ function Order() {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": data.getAttribute("name"),
+        "form-name": "kapcsolat",
         ...data,
       }),
     })
@@ -66,6 +66,7 @@ function Order() {
       <form
         name='kapcsolat'
         id='order-form'
+        method='POST'
         className={sendSuccess ? "invisible" : "visible"}
         onSubmit={handleSubmit(onSubmit)}
         data-netlify='true'>
