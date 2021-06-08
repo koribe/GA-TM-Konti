@@ -76,7 +76,7 @@ function Navbar() {
 
             <li key='products' className='nav-item'>
               <a href='tel:+36-70-428-7596' className='nav-links'>
-                +36/70 428 7596 <FaPhone />
+                <FaPhone />
               </a>
             </li>
 
