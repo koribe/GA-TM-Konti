@@ -110,6 +110,9 @@
   .social-media-wrap {
     flex-direction: column;
   }
+  .social-icons {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
